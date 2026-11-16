@@ -1,0 +1,167 @@
+[
+  {
+    "model": "openrouter/nvidia/nemotron-3.5-super-vl:free",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful assistant serving an automated check. Do exactly what the instruction says, nothing more."
+      },
+      {
+        "role": "user",
+        "content": "Reply with exactly one JSON object of the form {\"token\": \"SPARROW-7435\"} and nothing else."
+      }
+    ],
+    "max_tokens": 366,
+    "temperature": 0.16,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  {
+    "model": "openrouter/google/gemma-4-31b-it:free",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful assistant serving an automated check. Do exactly what the instruction says, nothing more."
+      },
+      {
+        "role": "user",
+        "content": "Reply with exactly one JSON object of the form {\"token\": \"SPARROW-7435\"} and nothing else."
+      }
+    ],
+    "max_tokens": 366,
+    "temperature": 0.16,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  {
+    "model": "openrouter/baidu/ernie-5.5-flash-preview:free",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful assistant serving an automated check. Do exactly what the instruction says, nothing more."
+      },
+      {
+        "role": "user",
+        "content": "Reply with exactly one JSON object of the form {\"token\": \"SPARROW-7435\"} and nothing else."
+      }
+    ],
+    "max_tokens": 366,
+    "temperature": 0.16,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  {
+    "model": "openrouter/thinkingmachines/inkling-2-small:free",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with exactly the word COMET-3884 and nothing else."
+      }
+    ],
+    "max_tokens": 350,
+    "temperature": 0.04,
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  {
+    "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with exactly the word COMET-3884 and nothing else."
+      }
+    ],
+    "max_tokens": 350,
+    "temperature": 0.04,
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  {
+    "model": "openrouter/nvidia/nemotron-3.5-super-vl:free",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with exactly the word FALCON-6712 and nothing else."
+      }
+    ],
+    "max_tokens": 352,
+    "temperature": 0.19,
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  {
+    "model": "openrouter/nvidia/nemotron-3.5-super-vl:free",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with exactly one JSON object of the form {\"token\": \"MAPLE-3581\"} and nothing else."
+      }
+    ],
+    "max_tokens": 366,
+    "temperature": 0.7,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  {
+    "model": "openrouter/thinkingmachines/inkling-2-small:free",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful assistant serving an automated check. Do exactly what the instruction says, nothing more."
+      },
+      {
+        "role": "user",
+        "content": "Do not call any tool. Reply with exactly the word YARROW-4506 and nothing else."
+      }
+    ],
+    "max_tokens": 502,
+    "temperature": 0.47,
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "lookup_account",
+          "description": "Look up one account by its id and return its plan and status.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "account_id": {
+                "type": "string",
+                "description": "The account id, four digits."
+              }
+            },
+            "required": [
+              "account_id"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "model": "openrouter/thinkingmachines/inkling-2-small:free",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a careful assistant serving an automated check. Do exactly what the instruction says, nothing more."
+      },
+      {
+        "role": "user",
+        "content": "Reply with exactly the word MAPLE-2391 and nothing else."
+      }
+    ],
+    "max_tokens": 403,
+    "temperature": 1
+  }
+]

@@ -1,0 +1,1 @@
+makefun check: git -C: spawnSync git EPERM

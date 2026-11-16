@@ -1,0 +1,5 @@
+{
+  "status": "blocked",
+  "completed": false,
+  "reason": "makefun check: git -C: spawnSync git EPERM"
+}

@@ -1,0 +1,4 @@
+{"seq":1,"method":"POST","path":"/register","status":200}
+{"seq":2,"method":"POST","path":"/register","status":200}
+{"seq":3,"method":"GET","path":"/work","status":200}
+{"seq":4,"method":"GET","path":"/work","status":200}

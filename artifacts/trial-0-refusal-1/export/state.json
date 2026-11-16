@@ -1,0 +1,414 @@
+{
+  "schema": "free-model-aggregator-02/state/v1",
+  "prompts": [
+    {
+      "id": "p01",
+      "delivered": true,
+      "status": 200,
+      "model": "openrouter/baidu/ernie-5.5-flash-preview:free",
+      "token_ok": true,
+      "valid": true,
+      "failures": [
+        {
+          "status": 429,
+          "code": "rate_limit",
+          "model": "openrouter/nvidia/nemotron-3.5-super-vl:free"
+        },
+        {
+          "status": 429,
+          "code": "rate_limit",
+          "model": "openrouter/google/gemma-4-31b-it:free"
+        }
+      ],
+      "checks": [
+        {
+          "name": "http",
+          "pass": true,
+          "detail": "the entry answered HTTP 200"
+        },
+        {
+          "name": "shape",
+          "pass": true,
+          "detail": "a well-formed openai completion"
+        },
+        {
+          "name": "content",
+          "pass": true,
+          "detail": "the answer carried the prompt's token"
+        },
+        {
+          "name": "model",
+          "pass": true,
+          "detail": "the response names the free model baidu/ernie-5.5-flash-preview:free"
+        },
+        {
+          "name": "usage",
+          "pass": true,
+          "detail": "the response reports 31 input and 9 output tokens (a whole input and an output of at least 1 are required)"
+        },
+        {
+          "name": "stop_reason",
+          "pass": true,
+          "detail": "stop is a legal openai stop reason"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "p02",
+      "delivered": true,
+      "status": 200,
+      "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "token_ok": true,
+      "valid": true,
+      "failures": [
+        {
+          "status": 503,
+          "code": "rate_limit",
+          "model": "openrouter/thinkingmachines/inkling-2-small:free"
+        }
+      ],
+      "checks": [
+        {
+          "name": "http",
+          "pass": true,
+          "detail": "the entry answered HTTP 200"
+        },
+        {
+          "name": "shape",
+          "pass": true,
+          "detail": "a well-formed openai event stream"
+        },
+        {
+          "name": "stream_order",
+          "pass": true,
+          "detail": "the openai events are in order and end with [DONE]"
+        },
+        {
+          "name": "content",
+          "pass": true,
+          "detail": "the answer carried the prompt's token"
+        },
+        {
+          "name": "model",
+          "pass": true,
+          "detail": "the response names the free model nvidia/nemotron-3-ultra-550b-a55b:free"
+        },
+        {
+          "name": "usage",
+          "pass": true,
+          "detail": "the response reports 31 input and 9 output tokens (a whole input and an output of at least 1 are required)"
+        },
+        {
+          "name": "stop_reason",
+          "pass": true,
+          "detail": "stop is a legal openai stop reason"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "p03",
+      "delivered": true,
+      "status": 200,
+      "model": "openrouter/nvidia/nemotron-3.5-super-vl:free",
+      "token_ok": true,
+      "valid": true,
+      "failures": [],
+      "checks": [
+        {
+          "name": "http",
+          "pass": true,
+          "detail": "the entry answered HTTP 200"
+        },
+        {
+          "name": "shape",
+          "pass": true,
+          "detail": "a well-formed anthropic event stream"
+        },
+        {
+          "name": "stream_order",
+          "pass": true,
+          "detail": "the anthropic events are in order and end with message_stop"
+        },
+        {
+          "name": "content",
+          "pass": true,
+          "detail": "the answer carried the prompt's token"
+        },
+        {
+          "name": "model",
+          "pass": true,
+          "detail": "the response names the free model nvidia/nemotron-3.5-super-vl:free"
+        },
+        {
+          "name": "usage",
+          "pass": true,
+          "detail": "the response reports 0 input and 9 output tokens (a whole input and an output of at least 1 are required)"
+        },
+        {
+          "name": "stop_reason",
+          "pass": true,
+          "detail": "end_turn is a legal anthropic stop reason"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "p04",
+      "delivered": true,
+      "status": 200,
+      "model": "openrouter/nvidia/nemotron-3.5-super-vl:free",
+      "token_ok": true,
+      "valid": true,
+      "failures": [],
+      "checks": [
+        {
+          "name": "http",
+          "pass": true,
+          "detail": "the entry answered HTTP 200"
+        },
+        {
+          "name": "shape",
+          "pass": true,
+          "detail": "a well-formed openai completion"
+        },
+        {
+          "name": "content",
+          "pass": true,
+          "detail": "the answer carried the prompt's token"
+        },
+        {
+          "name": "model",
+          "pass": true,
+          "detail": "the response names the free model nvidia/nemotron-3.5-super-vl:free"
+        },
+        {
+          "name": "usage",
+          "pass": true,
+          "detail": "the response reports 31 input and 9 output tokens (a whole input and an output of at least 1 are required)"
+        },
+        {
+          "name": "stop_reason",
+          "pass": true,
+          "detail": "stop is a legal openai stop reason"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "p05",
+      "delivered": true,
+      "status": 200,
+      "model": "openrouter/thinkingmachines/inkling-2-small:free",
+      "token_ok": true,
+      "valid": true,
+      "failures": [],
+      "checks": [
+        {
+          "name": "http",
+          "pass": true,
+          "detail": "the entry answered HTTP 200"
+        },
+        {
+          "name": "shape",
+          "pass": true,
+          "detail": "a well-formed anthropic message"
+        },
+        {
+          "name": "content",
+          "pass": true,
+          "detail": "the answer carried the prompt's token"
+        },
+        {
+          "name": "model",
+          "pass": true,
+          "detail": "the response names the free model thinkingmachines/inkling-2-small:free"
+        },
+        {
+          "name": "usage",
+          "pass": true,
+          "detail": "the response reports 31 input and 9 output tokens (a whole input and an output of at least 1 are required)"
+        },
+        {
+          "name": "stop_reason",
+          "pass": true,
+          "detail": "end_turn is a legal anthropic stop reason"
+        },
+        {
+          "name": "tools",
+          "pass": true,
+          "detail": "every tool the answer named was declared by the client"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "p06",
+      "delivered": true,
+      "status": 200,
+      "model": "openrouter/thinkingmachines/inkling-2-small:free",
+      "token_ok": true,
+      "valid": true,
+      "failures": [],
+      "checks": [
+        {
+          "name": "http",
+          "pass": true,
+          "detail": "the entry answered HTTP 200"
+        },
+        {
+          "name": "shape",
+          "pass": true,
+          "detail": "a well-formed anthropic message"
+        },
+        {
+          "name": "content",
+          "pass": true,
+          "detail": "the answer carried the prompt's token"
+        },
+        {
+          "name": "model",
+          "pass": true,
+          "detail": "the response names the free model thinkingmachines/inkling-2-small:free"
+        },
+        {
+          "name": "usage",
+          "pass": true,
+          "detail": "the response reports 31 input and 9 output tokens (a whole input and an output of at least 1 are required)"
+        },
+        {
+          "name": "stop_reason",
+          "pass": true,
+          "detail": "end_turn is a legal anthropic stop reason"
+        }
+      ],
+      "error": null
+    }
+  ],
+  "catalog": {
+    "providers": [
+      {
+        "id": "openrouter",
+        "base_url": "https://openrouter.ai/api/v1",
+        "key_env": "OPENROUTER_API_KEY",
+        "wire": "openai",
+        "models": [
+          {
+            "id": "openrouter/baidu/ernie-5.5-flash-preview:free",
+            "free": true,
+            "context_length": 1024000
+          },
+          {
+            "id": "openrouter/cohere/north-mini-code:free",
+            "free": true,
+            "context_length": 256000
+          },
+          {
+            "id": "openrouter/dots-studio/dots-3-note-preview:free",
+            "free": true,
+            "context_length": 512000
+          },
+          {
+            "id": "openrouter/google/gemma-4-26b-a4b-it:free",
+            "free": true,
+            "context_length": 262144
+          },
+          {
+            "id": "openrouter/google/gemma-4-31b-it:free",
+            "free": true,
+            "context_length": 262144
+          },
+          {
+            "id": "openrouter/inclusionai/ling-3.2-flash:free",
+            "free": true,
+            "context_length": 1048576
+          },
+          {
+            "id": "openrouter/liquid/lfm-3-1.7b:free",
+            "free": true,
+            "context_length": 262144
+          },
+          {
+            "id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "free": true,
+            "context_length": 256000
+          },
+          {
+            "id": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+            "free": true,
+            "context_length": 1000000
+          },
+          {
+            "id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+            "free": true,
+            "context_length": 1000000
+          },
+          {
+            "id": "openrouter/nvidia/nemotron-3.5-super-vl:free",
+            "free": true,
+            "context_length": 1000000
+          },
+          {
+            "id": "openrouter/particle-ai/particle-1:free",
+            "free": true,
+            "context_length": 1048576
+          },
+          {
+            "id": "openrouter/recursive/flint-v1.0:free",
+            "free": true,
+            "context_length": 262144
+          },
+          {
+            "id": "openrouter/thinkingmachines/inkling-2-small:free",
+            "free": true,
+            "context_length": 1048576
+          }
+        ]
+      }
+    ]
+  },
+  "catalog_route": {
+    "openai": [
+      "openrouter/baidu/ernie-5.5-flash-preview:free",
+      "openrouter/cohere/north-mini-code:free",
+      "openrouter/dots-studio/dots-3-note-preview:free",
+      "openrouter/google/gemma-4-26b-a4b-it:free",
+      "openrouter/google/gemma-4-31b-it:free",
+      "openrouter/inclusionai/ling-3.2-flash:free",
+      "openrouter/liquid/lfm-3-1.7b:free",
+      "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "openrouter/nvidia/nemotron-3.5-lightning:free",
+      "openrouter/nvidia/nemotron-3.5-super-vl:free",
+      "openrouter/particle-ai/particle-1:free",
+      "openrouter/recursive/flint-v1.0:free",
+      "openrouter/thinkingmachines/inkling-2-small:free"
+    ],
+    "anthropic": [
+      "openrouter/baidu/ernie-5.5-flash-preview:free",
+      "openrouter/cohere/north-mini-code:free",
+      "openrouter/dots-studio/dots-3-note-preview:free",
+      "openrouter/google/gemma-4-26b-a4b-it:free",
+      "openrouter/google/gemma-4-31b-it:free",
+      "openrouter/inclusionai/ling-3.2-flash:free",
+      "openrouter/liquid/lfm-3-1.7b:free",
+      "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "openrouter/nvidia/nemotron-3.5-lightning:free",
+      "openrouter/nvidia/nemotron-3.5-super-vl:free",
+      "openrouter/particle-ai/particle-1:free",
+      "openrouter/recursive/flint-v1.0:free",
+      "openrouter/thinkingmachines/inkling-2-small:free"
+    ]
+  },
+  "totals": {
+    "prompts": 6,
+    "delivered": 6,
+    "valid": 6,
+    "checks": 39,
+    "checks_passed": 39,
+    "failed_prompts": 2,
+    "failover_handled": 2
+  }
+}

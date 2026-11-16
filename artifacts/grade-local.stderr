@@ -1,0 +1,1 @@
+makefun grade-local: a live trial needs a model to call: set ANTHROPIC_API_KEY or OPENAI_API_KEY (your own key: a relay on this machine hands the forwarder's calls to that provider), or give masq's origin with --gateway <url> and its key in MAKEFUN_GATEWAY_KEY; a kept trial's replay check runs alone, at no cost, with --replay <cassette>
