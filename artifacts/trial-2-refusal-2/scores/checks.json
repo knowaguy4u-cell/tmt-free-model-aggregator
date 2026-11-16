@@ -1,1 +1,0 @@
-[{"key":"real_model","title":"Every answered prompt's model answered in the trial's gateway record, and its own response body carries the prompt's token","points":12,"earned":0,"pass":false,"detail":"no /cassette/cassette.json: every prompt is unproven, so quality is 0"}]
